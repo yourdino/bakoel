@@ -1,0 +1,469 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@100&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Outfit;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 3fr 1.2fr 1fr 0.8fr;
+    grid-template-areas: 
+    "nav nav nav nav nav nav"
+    "main main main main main main"
+    "fitur1 fitur1 fitur2 fitur2 fitur3 fitur3"
+    "jualan jualan jualan jualan jualan jualan"
+    "footer footer footer footer footer footer";
+    grid-gap: 0.2rem;
+    overflow-x: hidden;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+.navbar{
+    grid-area: nav;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+}
+
+.logo {
+    width: 35px;
+    cursor: pointer;
+    margin: 20px 30px;
+    border-radius: 5px;
+}
+
+.menu-icon {
+    width: 35px;
+    cursor: pointer;
+    display: none;
+    margin: 20px 30px;
+}
+
+nav {
+    margin-bottom: 20px;
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 60px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+nav ul li a:hover {
+    color: #FF8324;
+}
+
+.main {
+    grid-area: main;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 200px 0px 200px 30px;
+}
+
+.col-1 {
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 5%;
+}
+
+.col-1 h2{
+    font-size: 50px;
+}
+
+.col-1 h3{
+    font-size: 25px;
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+.btn-tagline{
+    font-size: 15px;
+    width: 140px;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    color: #fff;
+    background-color: #ffc933;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.col-1::after {
+    content: '';
+    width: 10px;
+    height: 60%;
+    background: linear-gradient(#ff7811, #ffc933);
+    position: absolute;
+    left: -50px;
+    top: 25px;
+}
+
+.col-2 {
+    position: relative;
+    flex-basis: 60%;
+    display: flex;
+    align-items: center;
+    right: -20px;
+}
+
+.col-2 .donut {
+    width: 60%;
+    transform: rotate(-12deg);
+}
+
+.color-box {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(#ff8325, #ffc933);
+    border-radius: 20px 0 0 20px;
+    height: 100%;
+    width: 80%;
+    z-index: -1;
+    transform: translateX(60px);
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.fitur-tagline {
+    margin-top: 75px;
+    margin-bottom: 75px;
+    font-weight: normal;
+    text-align: center;
+}
+
+#fitur1{
+    grid-area: fitur1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+}
+
+#fitur1 img {
+    width: 80px;
+    cursor: pointer;
+    margin: 20px 30px;
+}
+
+.fitur1-col-1 {
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 5%;
+    align-items: center;
+}
+
+.fitur1-col-2 {
+    position: relative;
+    flex-basis: 60%;
+    right: 20px;
+}
+
+.fitur1-col-2 h2{
+    margin: 20px;
+}
+
+.fitur1-col-2 p{
+    margin: 20px;
+}
+
+#fitur2{
+    grid-area: fitur2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+}
+
+#fitur2 img {
+    width: 80px;
+    cursor: pointer;
+    margin: 20px 30px;
+}
+
+.fitur2-col-1 {
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 5%;
+    align-items: center;
+}
+
+.fitur2-col-2 {
+    position: relative;
+    flex-basis: 60%;
+    right: 20px;
+}
+
+.fitur2-col-2 h2{
+    margin: 20px;
+}
+
+.fitur2-col-2 p{
+    margin: 20px;
+}
+
+#fitur3{
+    grid-area: fitur3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+}
+
+#fitur3 img {
+    width: 80px;
+    cursor: pointer;
+    margin: 20px 30px;
+}
+
+.fitur3-col-1 {
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 5%;
+    align-items: center;
+}
+
+.fitur3-col-2 {
+    position: relative;
+    flex-basis: 60%;
+    right: 20px;
+}
+
+.fitur3-col-2 h2{
+    margin: 20px;
+}
+
+.fitur3-col-2 p{
+    margin: 20px;
+}
+
+
+#jualan{
+    background-color: #ffc933;
+    grid-area: jualan;
+    width: 100%;
+}
+
+footer{
+    grid-area: footer;
+}
+
+.social-links img{
+    height: 20px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.social-links{
+    text-align: center;
+}
+
+.spacer {
+    aspect-ratio: 900/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.curve-atas {
+    background-image: url('./wave\ white\ top.svg');
+}
+
+.curve-bawah {
+    background-image: url('./wave\ white\ bottom.svg');
+}
+
+.konten-jual {
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 30px 0px 30px;
+}
+
+.jualan-col-1 {
+    flex-basis: 50%;
+    position: relative;
+    margin-left: 5%;
+}
+
+.jualan-col-1 img {
+    width: 600px;
+}
+
+.jualan-col-2 {
+    position: relative;
+    flex-basis: 50%;
+    margin: 100px;
+    max-width: 500px;
+}
+
+.jualan-col-2 h2{
+    margin: 20px;
+    font-size: 50px;
+}
+
+.jualan-col-2 p{
+    margin: 20px;
+    font-size: 25px;
+}
+
+.btn-JB{
+    margin: 20px;
+    font-size: 15px;
+    width: 140px;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    color: #fff;
+    background: linear-gradient(to right, #000000, #3a2d08);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.footer-tagline {
+    margin:50px 0px ;
+    font-weight: normal;
+    text-align: center;
+}
+
+footer p{
+    text-align: center;
+    margin: 50px 0;
+}
+
+@media only screen and (max-width:550px) {
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 2.2fr 0.4fr;
+        grid-template-areas: 
+        "nav"
+        "main"
+        "fitur1"
+        "fitur2"
+        "fitur3"
+        "jualan"
+        "footer";
+    }
+
+    .row{
+        flex-direction: column-reverse;
+        margin: 50;
+    }
+
+    .col-1 {
+        margin-top: 100px;
+    }
+
+    .col-1 h2{
+        font-size: 30px;
+        max-width: 250px;
+    }
+    
+    .col-1 h3{
+        font-size: 20px;
+        font-weight: 300;
+        margin: 20px 0;
+    }
+
+    .btn-tagline{
+        font-size: 15px;
+        width: 100px;
+    }
+
+    .color-box {
+        transform: translateX(30px);
+    }
+
+    .col-2 .donut {
+        width: 70%;
+        transform: rotate(-12deg);
+    }
+
+    nav ul{
+        width: 100%;
+        background-color: #eee;
+        /* background:  linear-gradient(#ff7811, #FF8324); */
+        position: absolute;
+        top: 75px;
+        right: 0;
+        z-index: 2;
+    }
+
+    nav ul li {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a{
+        color: #000000;
+    }
+
+    .menu-icon{
+        display: block;
+    }
+
+    #menuList {
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    .konten-jual{
+        height: 900px;
+        flex-direction: column-reverse;
+        margin: 50;
+    }
+    .jualan-col-1 {
+        flex-basis: 50%;
+        position: relative;
+    }
+    
+    
+    .jualan-col-2 {
+        margin-top: 100px;
+        max-width: 350px;
+    }
+
+    .jualan-col-2 h2{
+        font-size: 30px;
+    }
+    
+    .jualan-col-2 p{
+        margin: 20px;
+        font-size: 15px;
+    }
+
+    .jualan-col-1 img {
+        width: 300px;
+        margin: 0;
+    }
+    
+    .btn-JB{
+        font-size: 15px;
+        width: 100px;
+    }
+
+}

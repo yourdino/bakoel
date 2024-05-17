@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@100&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Outfit;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr 0.5fr ;
+    grid-template-areas: 
+    "nav"
+    "tambah"
+    "list"
+    "footer";
+    grid-gap: 0.2rem;
+    overflow-x: hidden;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+body {
+    background-color: #f8f8f8;
+}
+
+#navbar{
+    grid-area: nav;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+.logo {
+    width: 35px;
+    cursor: pointer;
+    margin: 20px 30px;
+    border-radius: 5px;
+}
+
+.menu-icon {
+    width: 35px;
+    cursor: pointer;
+    display: none;
+    margin: 20px 30px;
+}
+
+nav {
+    margin-bottom: 20px;
+    flex: 1;
+    text-align: right;
+}
+
+.nav-li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 60px;
+}
+
+.nav-li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+.nav-li a:hover {
+    color: #FF8324;
+}
+
+.icon-link {
+    display: none;
+}
+
+#tambah-menu{
+    background-color: aquamarine;
+    grid-area: tambah;
+}
+
+.accordion {
+    margin: 60px auto;
+    width: 600px;
+}
+
+.accordion li{
+    list-style: none;
+    width: 100%;
+    margin: 20px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+.accordion li label {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+
+label::before {
+    content: '+';
+    margin-right: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.accordion .content{
+    color: #000;
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordion input[type="radio"]:checked + label + .content {
+    max-height: 400px;
+    padding: 10px 10px 20px;
+}
+
+#list-menu {
+    background-color: aqua;
+    grid-area: list;
+}
+
+#footer {
+    background-color: azure;
+    grid-area: footer;
+}
+
+.copyright{
+    font-size: 14px;
+    text-align: center;
+    margin: 50px 0;
+}

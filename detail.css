@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@100&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Outfit;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 2fr 0.8fr;
+    grid-template-rows: 0.2fr 1fr 0.5fr ;
+    grid-template-areas: 
+    "nav nav"
+    "produk beli"
+    "footer footer";
+    grid-gap: 0.2rem;
+    overflow-x: hidden;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: #f8f8f8;
+}
+
+#navbar {
+    grid-area: nav;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+.logo {
+    width: 35px;
+    cursor: pointer;
+    margin: 20px 30px;
+    border-radius: 5px;
+}
+
+.menu-icon {
+    width: 35px;
+    cursor: pointer;
+    display: none;
+    margin: 20px 30px;
+}
+
+nav {
+    margin-bottom: 20px;
+    flex: 1;
+    text-align: right;
+}
+
+.nav-li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 60px;
+}
+
+.nav-li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+.nav-li a:hover {
+    color: #FF8324;
+}
+
+.icon-link {
+    display: none;
+}
+
+#produk {
+    grid-area: produk;
+}
+
+.produk-box {
+    background-color: #fff;
+    margin: 20px;
+    /* border-top-left-radius: 20px; */
+    border-radius: 20px;
+    border: 1px solid #dce9ed;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.produk-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 10px;
+    gap: 0px;
+}
+
+.col-1 {
+    position: relative;
+    display: flex;
+    flex-basis: 40%;
+    align-items: center;
+}
+
+.col-1 .produk-img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.col-2 {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5px;
+    position: relative;
+    flex-basis: 60%;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.col-2-box {
+    border-bottom: solid 2px #9fb7c2;
+    padding-bottom: 15px;
+}
+
+.col-2 h2 {
+    margin: 20px 0 10px 0;
+    font-weight: 400;
+}
+
+.col-2 .span-bold {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.col-2 h4 {
+    margin-top: 15px;
+}
+
+.col-2 .tanggal {
+    margin: 15px 10px;
+    text-align: right;
+}
+
+.desc {
+    max-width: 550px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.publisher {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #9fb7c2;
+}
+
+.publisher-img {
+    display: flex;
+    align-items: center;
+}
+
+.publisher-img img {
+    width: 25px;
+    margin: 0 10px;
+}
+
+.publisher .username {
+    display: inline-block;
+    margin: 0;
+}
+
+#pembelian {
+    grid-area: beli;
+}
+
+.pembelian-box {
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #dce9ed;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pembelian-content h3{
+    font-weight: 400
+}
+
+.keterangan-produk {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px;
+    border-radius: 15px;
+    border: 1px solid #9fb7c2;
+}
+
+.ket-img img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 20px 0 20px 20px;
+}
+
+.keterangan-produk .ket-nama {
+    display: inline-block;
+    margin: 20px;
+}
+
+.jumlah-stok .stok {
+    margin-right: 15px;
+    text-align: right;
+}
+
+.harga {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.harga p {
+    font-size: 25px;
+}
+
+.jumlah-kolom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.wrapper{
+    height: 60px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFF;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.wrapper span{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+}
+
+.wrapper span.num{
+    font-size: 20px;
+    border-right: 2px solid rgba(0,0,0,0.2);
+    border-left: 2px solid rgba(0,0,0,0.2);
+    pointer-events: none;
+}
+
+textarea{
+    margin: 15px 0;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background-color: #e2e2e2;
+    border-radius: 10px;
+    resize: vertical;
+    font-size: 15px;
+    overflow: hidden;
+}
+
+/* .button-note{
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #6d4af7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'poppins',sans-serif;
+    transition: background-color 0.3s;
+    font-size: 22px;
+}
+
+.button-note:hover{
+    background-color: #0056b3;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #d8c8c8;
+    border-radius: 10px;
+} */
+
+.btn-beli button{
+    margin: 10px 0 5px 0;
+    color: #fff;
+    background: linear-gradient(to right, #000000, #3a2d08);
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.btn-beli button a, .btn-keranjang button a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.btn-keranjang button {
+    color: #fff;
+    background: linear-gradient(to right, #000000, #3a2d08);
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+}
+
+#footer {
+    /* background-color: rgb(181, 90, 199); */
+    grid-area: footer;
+}
+
+.copyright{
+    font-size: 14px;
+    text-align: center;
+    margin: 50px 0;
+}

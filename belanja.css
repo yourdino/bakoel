@@ -1,0 +1,545 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@100&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Outfit;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 0.5fr 2fr 2fr 0.8fr;
+    grid-template-areas: 
+    "nav nav nav nav nav nav"
+    "beli search search search search user-account"
+    "beli produk produk produk produk user-account"
+    "beli produk produk produk produk user-account"
+    "footer footer footer footer footer footer";
+    grid-gap: 0.2rem;
+    overflow-x: hidden;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: #f8f8f8;
+}
+
+#navbar{
+    grid-area: nav;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+.logo {
+    width: 35px;
+    cursor: pointer;
+    margin: 20px 30px;
+    border-radius: 5px;
+}
+
+.menu-icon {
+    width: 35px;
+    cursor: pointer;
+    display: none;
+    margin: 20px 30px;
+}
+
+nav {
+    margin-bottom: 20px;
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 60px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+nav ul li a:hover {
+    color: #FF8324;
+}
+
+.icon-link {
+    display: none;
+}
+
+#serach-bar {
+    background-color: rgb(255, 0, 200);
+    grid-area: search;
+}
+
+.search-form {
+    margin: 0px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-input {
+    padding: 10px;
+    width: 800px;
+    height: 40px;
+    margin-right: 5px; 
+    border-radius: 20px;
+    margin: 10px;
+    border: solid 1px #53717e;
+}
+
+.search-input::placeholder {
+    margin: 2px;
+}
+
+.search-form button {
+    background-color: black;
+    color: #FADBB7;
+    border: none;
+    border-radius: 20px;
+    width: 40px; 
+    height: 40px; 
+}
+
+  
+
+#user-profile {
+    grid-area: user-account;
+}
+
+.user-content {
+    width: 215px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-box {
+    background-color: #ffffff;
+    margin: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile {
+    width: 25px;
+    margin: 10px;
+}
+
+.text-content {
+    margin: 10px;
+}
+
+.text-content p {
+    font-size: 15px;
+    color: #53717e;
+}
+
+.btn-logout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-logout button {
+    position: relative;
+    background-color: black;
+    border-radius: 20px;
+    color: #FADBB7;
+    width: 215px;
+    height: 35px;
+}
+
+.btn-logout button a {
+    text-decoration: none;
+    color: #FADBB7;
+}
+
+#keranjang {
+    /* background-color: blanchedalmond; */
+    grid-area: beli;
+}
+
+.table-box {
+    width: 270px;
+    background-color: #ffffff;
+    margin: 10px;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.table-title h2 {
+    font-weight: normal;
+    margin: 5px 0;
+    font-size: 20px;
+}
+
+.table-title p {
+    font-size: 13px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+table th {
+    font-weight: normal;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #99b6c3;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+.btn-table {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 35px;
+    font-size: 15px;
+    background: linear-gradient(to right, #000000, #3a2d08);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn-table a {
+    text-decoration: none;
+    color: #ffd769;
+}
+
+#produk {
+    grid-area: produk;
+}
+
+.produk-list {
+    max-width: 850px;
+    display: flex;
+    margin: 10px auto;
+    gap: 10px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: flex-start;
+    max-height: 1800px;
+}
+
+.produk-content {
+    margin: 0px 10px;
+    padding: 3px;
+    max-width: 200px;
+    flex: 1 1 200px;
+}
+
+.produk-content h4 {
+    display: -webkit-box;           
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    height: 15px;
+    width: 100%;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.harga {
+    font-size: 15px;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.stok {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #53717e;
+}
+
+.publisher {
+    font-size: 14px;
+    color: #53717e;  
+}
+
+.tanggal {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #53717e;
+}
+
+.produk-desc {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.produk-img img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.produk-box {
+    max-width: 200px;
+    height: 340px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: 1px solid #c8c8c8;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: auto;
+}
+
+.btn-produk {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    background-color:#000000 ;
+    width: 100%;
+    height: 35px;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-produk a {
+    text-decoration: none;
+    color: #ffd769;
+}
+
+#footer {
+    grid-area: footer;
+}
+
+.copyright{
+    font-size: 14px;
+    text-align: center;
+    margin: 50px 0;
+}
+
+@media only screen and (max-width:480px) {
+    .container {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 0fr 0.2fr 1fr 0.8fr;
+        grid-template-areas: 
+        "nav"
+        "user-account"
+        "search"
+        "produk"
+        "beli"
+        "footer";
+    }
+    
+    
+    nav ul{
+        width: 100%;
+        background-color: #eee;
+        /* background:  linear-gradient(#ff7811, #FF8324); */
+        position: absolute;
+        top: 75px;
+        right: 0;
+        z-index: 2;
+    }
+
+    nav ul li {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a{
+        color: #000000;
+    }
+
+    .menu-icon{
+        display: block;
+    }
+
+    .icon-link {
+        display: inline-block;
+    }
+
+    .icon-link i {
+        color: #000;
+        font-size: 30px;
+    }
+
+    #menuList {
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    .user-box,
+    .profile,
+    .text-content,
+    .btn-logout {
+        display: none;
+    }
+
+    .search-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search-form {
+        width: 100%;
+        max-width: 300px;
+        display: flex;
+    }
+  
+    .search-form input {
+        flex: 1;
+        padding: 10px;
+    }
+  
+    .search-form button {
+        padding: 10px;
+    }
+
+    .produk-list {
+        width: 100%;
+        max-width: 450px;
+        margin: 10px auto;
+        display: flex;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .produk-content {
+        max-width: 200px;
+    }
+    
+    .produk-content h4 {
+        display: -webkit-box;           
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+        height: 20px;
+        width: 100%;
+        word-wrap: break-word;
+        word-break: break-all;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: normal;
+    }
+    
+    .harga {
+        font-size: 14px;
+        margin: 10px 0;
+    }
+    
+    .stok {
+        margin-top: 15px;
+        font-size: 12px;
+        color: #53717e;
+    }
+    
+    .publisher {
+        display: -webkit-box;           
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+        height: 15px;
+        width: 100%; 
+        margin: 5px 0;
+        font-size: 12px;
+        color: #53717e;  
+    }
+    
+    .tanggal {
+        margin-top: 5px;
+        font-size: 12px;
+        color: #53717e;
+    }
+    
+    .produk-desc {
+        /* display: -webkit-box;           
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+        height: 15px;
+        width: 100%; */
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+    
+    .produk-img img {
+        width: 200px;
+        height: 150px;
+        object-fit: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    
+    .produk-box {
+        max-width: 200px;
+        max-height: 340px;
+        background-color: #ffffff;
+        border-radius: 15px;
+        border: 1px solid #c8c8c8;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: auto;
+    }
+    
+    .btn-produk {
+        margin-top: 15px;
+        margin-bottom: 10px;
+        background-color:#000000 ;
+        width: 100%;
+        height: 35px;
+        font-size: 15px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    
+    .btn-produk a {
+        text-decoration: none;
+        color: #ffd769;
+    }
+
+    .table-box {
+
+       display: none;
+    }
+
+}

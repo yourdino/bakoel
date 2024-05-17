@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@100&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Outfit;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 3fr 1.2fr 1.2fr 0.8fr;
+    grid-template-areas: 
+    "nav nav nav nav nav nav"
+    "pesanan tagline tagline tagline tagline user-account"
+    "pesanan menu1 menu1 menu1 menu1 user-account"
+    "pesanan menu2 menu2 menu2 menu2 user-account"
+    "pesanan footer footer footer footer user-account";
+    grid-gap: 0.2rem;
+    overflow-x: hidden;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+#navbar{
+    grid-area: nav;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+}
+
+.logo {
+    width: 35px;
+    cursor: pointer;
+    margin: 20px 30px;
+    border-radius: 5px;
+}
+
+.menu-icon {
+    width: 35px;
+    cursor: pointer;
+    display: none;
+    margin: 20px 30px;
+}
+
+nav {
+    margin-bottom: 20px;
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 60px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+nav ul li a:hover {
+    color: #FF8324;
+}
+
+#pesanan {
+    grid-area: pesanan;
+    margin-top: 80px;
+}
+
+.pesanan-box {
+    background-color: #ffffff;
+    margin: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.pesanan-content {
+    display: flex;
+    margin: 10px;
+}
+
+.pesanan-icon img{
+    width: 30px;
+}
+
+.pesanan-text {
+    margin-left: 10px;
+}
+
+.pesanan-text p{
+    font-size: 15px;
+    color: #53717e;
+}
+
+#tagline {
+    grid-area: tagline;
+    margin-top: 80px;
+}
+
+.tagline-box {
+    background: linear-gradient(to bottom right, #ffffff 0%, #ffffff 61%, #FADBB7 60%);
+    height: 100%;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tagline-text {
+    flex-basis: 50%;
+    position: relative;
+}
+
+.tagline-text h1{
+    margin: 20px 0px;
+}
+
+.tagline-img img{
+    flex-basis: 50%;
+    right: 50px;
+    position: relative;
+    float: right;
+    width: 250px;
+}
+
+.tagline-content {
+    margin: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#user-account {
+    /* background-color: #59ff00; */
+    grid-area: user-account;
+    margin-top: 80px;
+}
+
+.user-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20x;
+}
+
+.user-box {
+    background-color: #ffffff;
+    margin: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile {
+    width: 25px;
+    margin: 10px;
+}
+
+.text-content {
+    margin: 10px;
+}
+
+.text-content p {
+    font-size: 15px;
+    color: #53717e;
+}
+
+.btn-logout {
+    margin: 0;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+}
+
+.btn-logout button {
+    position: relative;
+    background-color: black;
+    border-radius: 20px;
+    color: #FADBB7;
+    width: 225px;
+    height: 65px;
+    top: -40px;
+    padding-top: 25px;
+}
+
+#menu1 {
+    grid-area: menu1;
+    background-color: #ffd29f;
+    margin: 0 10px;
+    border-radius: 20px;
+    position: relative;
+    top: -23px;
+    z-index: -1;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu1-box {
+    position: relative;
+    margin: 0 20px;
+}
+
+.menu1-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 10px 0px 10px;
+    gap: 150px;
+}
+
+.menu1-content img {
+    width: 40px;
+}
+
+.menu1-content-desc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 10px 40px 10px;
+    gap: 140px; 
+}
+
+.menu1-content-desc a{
+    text-decoration: none;
+    color: black;
+}
+
+#menu2 {
+    grid-area: menu2;
+}
+
+#footer {
+    grid-area: footer;
+}
+
+.footer-box {
+    background-color: #ffffff;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    padding: 20px 20px 20px 20px;
+    width: 400px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+}
+    
+.help-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20x 0 20px;
+}
+
+.help-logo {
+    width: 50px;
+    align-items: center;
+    margin: 20px;
+}
+
+
+.text-bantuan p{
+    max-width: 250px;
+    font-size: 15px;
+    color: #53717e;
+}
+
+.text-bantuan img{
+    width: 20px;
+    float: right;
+    position: relative;
+    bottom: 20px;
+} 
+
+
+.social-links img{
+    height: 20px;
+    margin: 10px;
+    cursor: pointer;
+    fill: #ffbb00;
+}
+
+.social-links{
+    text-align: center;
+}
+
+.footer-tagline {
+    margin:50px 0px ;
+    font-weight: normal;
+    text-align: center;
+}
+
+.copyright{
+    font-size: 14px;
+    text-align: center;
+    margin: 50px 0;
+}
+
+@media only screen and (max-width:550px) {
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.8fr 2.2fr 1fr 0.6fr 0.6fr 0.4fr;
+        grid-template-areas: 
+        "navbar"
+        "user-account"
+        "tagline"
+        "pesanan"
+        "menu1"
+        "menu2"
+        "footer";
+    }
+
+    .copyright{
+        font-size: 12px;
+    }
+
+    nav ul{
+        width: 100%;
+        background-color: #eee;
+        /* background:  linear-gradient(#ff7811, #FF8324); */
+        position: absolute;
+        top: 75px;
+        right: 0;
+        z-index: 2;
+    }
+
+    nav ul li {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a{
+        color: #000000;
+    }
+
+    .menu-icon{
+        display: block;
+    }
+
+    #menuList {
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    #tagline {
+        margin-top: 0px;
+    }
+
+    .tagline-box {
+        height: 100%;
+        width: 100%;
+        max-width: 440px;
+    }
+    
+    .tagline-text {
+        flex-basis: 50%;
+        position: relative;
+    }
+    
+    .tagline-text h1{
+        font-size: 20px;
+        margin: 20px 0px;
+    }
+
+    .tagline-text p {
+        font-size: 15px;
+    }
+    
+    .tagline-img img{
+        flex-basis: 50%;
+        position: relative;
+        float: right;
+        right: inherit;
+        width: 120px;
+    }
+
+
+    .user-box {
+        max-width: 450px;
+    }
+
+    .user-content {
+        max-width: 450px;
+    }
+
+    .btn-logout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+    }
+
+    #pesanan {
+        margin-top : 10px;
+        margin-bottom: 10px;
+    }
+
+    .pesanan-box {
+        max-width: 430px;
+    }
+
+    .pesanan-content {
+        justify-content: center;
+        margin: 10px 40px;
+    }
+
+    #menu1 {
+        position: relative;
+        top: -50px;
+        max-width: 430px;
+    }
+
+    .menu1-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 50px 10px 0px 10px;
+        gap: 60px;
+    }
+
+    .menu1-content img {
+        width: 30px;
+    }
+
+    .menu1-content-desc {
+        gap: 42px;
+        font-size: 14px;
+    }
+
+}

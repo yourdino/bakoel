@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="./home.css">
+</head>
+<body>
+    
+<div class="container">
+    <div id="navbar">
+        <img src="./img/logo.jpg" class="logo">
+        <nav>
+            <ul id="menuList">
+                <li><a href="">Home</a></li>
+                <li><a href="./belanja.html">Belanja</a></li>
+                <li><a href="">Riwayat</a></li>
+                <li><a href="">Profile</a></li>
+            </ul>
+        </nav>
+        <img src="./img/menu.png" class="menu-icon" onclick="togglemenu()">
+    </div>
+
+    <div id="user-account">
+        <div class="user-box">
+            <div class="user-content">
+                <div class="text-content">
+                    <h4>Username</h4>
+                    <p>email</p>
+                </div>
+                <div class="user-logo"><img src="./img/user (3).png" class="profile"></div>
+            </div>
+        </div>
+        <div class="btn-logout">
+            <button>Logout</button>
+        </div>
+    </div>
+
+    <div id="pesanan">
+        <div class="pesanan-box">
+            <div class="pesanan-content">
+                <div class="pesanan-icon">
+                    <img src="./img/icons8-bag-64.png" alt="">
+                </div>
+                <div class="pesanan-text">
+                    <h4>Detail Pesanan</h4>
+                    <p>belum ada pesanan</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="tagline">
+        <div class="tagline-box">
+            <div class="tagline-content">
+                <div class="tagline-text">
+                    <h1>Selamat datang kembali!</h2>
+                    <p>mau ngapain hari ini?</p>
+                </div>
+                <div class="tagline-img">
+                    <img src="./img/3d-business-joyful-man-with-phone-waving-his-hand.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="menu1">
+        <div class="menu1-box">
+            <div class="menu1-content">
+                <a href=""><img src="./img/icons8-list-64.png" alt=""></a>
+                <a href=""><img src="./img/icons8-take-away-food-50.png" alt=""></a>
+                <a href=""><img src="./img/icons8-history-64.png" alt=""></a>
+                <a href=""><img src="./img/icons8-search-50.png" alt=""></a>
+            </div>
+            <div class="menu1-content-desc">
+                <a href="">Menu</a>
+                <a href="">Pesanan</a>
+                <a href="">History</a>
+                <a href="">search</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="menu2"></div>
+
+    <div id="footer">
+        <div class="footer-box">
+            <div class="help-content">
+                <div class="logo-bantuan">
+                    <img src="./icons8-help-pulsar-color/icons8-help-96.png" class="help-logo">
+                </div>
+                <div class="text-bantuan">
+                    <h4>Pusat bantuan</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href=""><img src="./icons8-right-96.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+            <p class="copyright">&copy; 2024 Bakoel. Hak Cipta Dilindungi Undang-Undang.</p>
+    </div>
+</div>
+
+<script>
+    var menuList = document.getElementById("menuList");
+
+    menuList.style.maxHeight = "0px";
+
+    function togglemenu(){
+
+        if(menuList.style.maxHeight == "0px")
+            {
+                menuList.style.maxHeight = "130px";
+            }
+        else
+            {
+                menuList.style.maxHeight = "0px";
+            }
+        
+    }
+</script>
+
+</body>
+</html>
