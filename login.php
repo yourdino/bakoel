@@ -1,3 +1,11 @@
+<?php
+session_start(); 
+if (isset($_SESSION['ID'])) { //isset > data ada
+    header('Location: home.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,23 +23,24 @@
 
     <div class="container" id="container">
         <div class="form-container sign-up">
-            <form>
+            <form action= "proses_signup.php" method="post">
                 <h1>Buat Akun</h1>
                 <span>gunakan email untuk registrasi</span>
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
+                <!--<form action= "proses_login.php" method="post">-->
+                <input type="text" name="username" placeholder="Username">
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="password" placeholder="Password">
                 <button>Sign Up</button>
             </form>
         </div>
         <div class="form-container sign-in">
-            <form>
+            <form action= "proses_login.php" method="post">
                 <h1>Sign In</h1>
                 <span>gunakan email dan password</span>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
+                <input type="email" name='email' placeholder="Email">
+                <input type="password" name='password' placeholder="Password">
                 <!-- <a href="#">Forget Your Password?</a> -->
-                <button>Sign In</button>
+                <button type="submit">Sign in</button>
             </form>
         </div>
         <div class="toggle-container">
@@ -39,7 +48,7 @@
                 <div class="toggle-panel toggle-left">
                     <h1>Welcome Back!</h1>
                     <p>Jika sudah mendaftar, masuk menggunakan email dan password saja untuk mengunakan fitur yang tersedia sebebasnya</p>
-                    <button class="hidden" id="login">Sign In</button>
+                    <a href="./home.php">Sign In</a>
                 </div>
                 <div class="toggle-panel toggle-right">
                     <h1>Hello, Friend!</h1>

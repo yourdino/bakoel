@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@100&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Outfit;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 2fr 0.8fr;
+    grid-template-areas: 
+    "nav"
+    "form"
+    "footer";
+    grid-gap: 0.2rem;
+    overflow-x: hidden;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: #ffebe2;
+}
+
+#navbar{
+    grid-area: nav;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+.logo {
+    width: 35px;
+    cursor: pointer;
+    margin: 20px 30px;
+    border-radius: 5px;
+}
+
+.menu-icon {
+    width: 35px;
+    cursor: pointer;
+    display: none;
+    margin: 20px 30px;
+}
+
+nav {
+    margin-bottom: 20px;
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 60px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+nav ul li a:hover {
+    color: #FF8324;
+}
+
+.icon-link {
+    display: none;
+}
+
+#form {
+    grid-area: form;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 50px 0 0 0;
+}
+
+.form-content {
+    width: 100%;
+}
+
+form ,label {
+    text-align: center;
+}
+
+form, p {
+    margin: 10px 0;
+}
+
+.form-label {
+    margin: 0 auto;
+}
+
+.judul {
+    text-align: center;
+    margin: 20px 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #c0cdd3;
+}
+
+td img {
+    max-width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 10%;
+    margin: 0;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+.nama {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    max-width: 100px;
+}
+
+.note-content {
+    margin: 40px 25px;
+    background-color: #eee;
+    padding: 20px;
+}
+
+.note {
+    text-align: left;
+    font-size: 13px;
+    margin: 0 20px;
+}
+
+.metode-bayar {
+    margin-top: 20px;
+}
+
+.bayar-content {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.bayar-content label {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.bayar-content input[type="radio"] {
+    margin-right: 10px;
+}
+
+.btn-byr {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    background-color:#FF8324 ;
+    border-radius: 10px;
+    border: 1px solid #d46b1a;
+}
+
+.btn-byr a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn-byr:hover {
+    background-color: #d46b1a;
+}
+
+#footer{
+    grid-area: footer;
+}
+
+.copyright{
+    font-size: 14px;
+    text-align: center;
+    margin: 50px 0 0 0;
+}
+
+@media only screen and (max-width:480px) {
+    .container {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 2fr 0.8fr;
+        grid-template-areas: 
+        "nav"
+        "form"
+        "footer";
+    }
+    
+    
+    nav ul{
+        width: 100%;
+        background-color: #eee;
+        /* background:  linear-gradient(#ff7811, #FF8324); */
+        position: absolute;
+        top: 75px;
+        right: 0;
+        z-index: 2;
+    }
+
+    nav ul li {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a{
+        color: #000000;
+    }
+
+    .menu-icon{
+        display: block;
+    }
+
+    .icon-link {
+        display: inline-block;
+    }
+
+    .icon-link i {
+        color: #000;
+        font-size: 30px;
+    }
+
+    #menuList {
+        overflow: hidden;
+        transition: 0.5s;
+    }
+}

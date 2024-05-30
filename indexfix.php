@@ -17,10 +17,10 @@
             <img src="./img/logo.jpg" class="logo">
             <nav>
                 <ul id="menuList">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Belanja</a></li>
-                    <li><a href="">Riwayat</a></li>
-                    <li><a href="./login.html">Login</a></li>
+                    <li><a href="./login.php">Home</a></li>
+                    <li><a href="./login.php">Belanja</a></li>
+                    <li><a href="./login.php">Riwayat</a></li>
+                    <li><a href="./login.php">Login</a></li>
                 </ul>
             </nav>
             <img src="./img/menu.png" class="menu-icon" onclick="togglemenu()">
@@ -30,7 +30,7 @@
                 <div class="col-1">
                     <h2>Selamat Datang di BAKOEL!</h2>
                     <h3>Lorem ipsum dolor sit amet, <br>consectetur adipisicing elit. <br> Magnam officia modi, iusto,<br> minima sed alias,</h3>
-                    <button type="button" class="btn-tagline">Buat Akun</button>
+                    <button type="button" class="btn-tagline"><a href="./login.php">Buat Akun</a></button>
                 </div>
                 <div class="col-2">
                     <img src="./img/donut.png" class="donut">
@@ -78,7 +78,7 @@
                 <div class="jualan-col-2">
                     <h2>Mulai Jual Beli</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quo odio quia iusto debitis sint aliquid reiciendis nihil voluptatum quaerat? Blanditiis ut neque optio fugiat adipisci vel corporis nam vitae?</p>
-                    <button class="btn-JB">Buat Akun</button>
+                    <button class="btn-JB"><a href="./login.php">Buat Akun</a></button>
                 </div>
             </div>
             <div class="spacer curve-bawah"></div>
